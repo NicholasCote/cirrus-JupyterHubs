@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: '{{ .Release.Name }}-{{ .Values.name }}'
+  namespace: argo
+spec:
+  project: default
+  sources:
+    - repoURL: https://github.com/Gin-G/argo-k8s-stuff
+      path: daskhub
+      targetRevision: main
+      helm:
+        valueFiles: 
+          - $values/daskhub/values.yaml
+    - repoURL: 'https://github.com/NicholasCote/cirrus-JupyterHubs'
+      targetRevision: main
+      ref: values
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: '{{ .Values.namespace }}'
+            

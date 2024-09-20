@@ -1,0 +1,10 @@
+name: ctsm-hub
+namespace: app-o-apps-jhubs
+jupyterhub:
+  singleuser:
+    image:
+      name: docker.io/escomp/test_20240912_1
+      tag: "latest"
+  ingress:
+    hosts: 
+      - ctsm-jhub.gingmachine

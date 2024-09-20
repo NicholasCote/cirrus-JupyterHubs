@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Gin-G/argo-k8s-stuff.git
-    chart: daskhub
-    targetRevision: 2024.1.1
+    repoURL: https://github.com/Gin-G/argo-k8s-stuff
+    path: daskhub
+    targetRevision: values
     helm:
-    values: |
-      {{- toYaml .Values.jupyterHubConfig | nindent 8 }}
+      values: |
+        {{- toYaml .Values.jupyterHubConfig | nindent 8 }}
   destination:
     server: https://kubernetes.default.svc
     namespace: '{{ .Values.namespace }}'

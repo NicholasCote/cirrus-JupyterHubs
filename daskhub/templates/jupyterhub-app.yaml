@@ -11,7 +11,7 @@ spec:
     targetRevision: main
     helm:
       values: |
-        {{- toYaml .Values.jupyterHubConfig | nindent 8 }}
+        {{ .Values.jupyterHubConfig | nindent 8 }}
   destination:
     server: https://kubernetes.default.svc
     namespace: '{{ .Values.namespace }}'

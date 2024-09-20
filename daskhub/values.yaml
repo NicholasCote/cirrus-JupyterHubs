@@ -8,7 +8,7 @@ jupyterHubs:
         singleuser:
           image:
             name: docker.io/ncote/jhub-base
-            tag: "2024-09-10"
+            tag: "latest"
         ingress:
           hosts:
-            app-o-apps-jhubs.gingmachine
+            - app-o-apps-jhubs.gingmachine

@@ -1,0 +1,15 @@
+jupyterHubs:
+  - name: base-hub
+    namespace: app-o-apps-jhubs
+    jupyterHubConfig:
+      jupyterhub:
+        singleuser:
+          image:
+            name: docker.io/ncote/jhub-base
+            tag: "2024-09-10"
+        ingress:
+          enabled: true
+          annotations:
+            traefik.ingress.kubernetes.io/router.intrypoints: web
+          hosts:
+            app-o-apps-jhubs.gingmachine

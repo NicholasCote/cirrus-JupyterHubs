@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: '{{ .Release.Name }}-{{ .Values.jupyterHubs.name }}'
+  name: '{{ .Release.Name }}-{{ .Values.name }}'
   namespace: argo
 spec:
   project: default
@@ -14,7 +14,7 @@ spec:
       {{- toYaml .Values.jupyterHubConfig | nindent 8 }}
   destination:
     server: https://kubernetes.default.svc
-    namespace: '{{ .Values.jupyterHubs.namespace }}'
+    namespace: '{{ .Values.namespace }}'
   syncPolicy:
     automated:
       prune: true

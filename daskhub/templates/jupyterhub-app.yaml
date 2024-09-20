@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: '{{ .Release.Name }}-{{ .Values.name }}'
+  name: '{{ .Release.Name }}-{{ .Values.jupyterHubs.name }}'
   namespace: argo
 spec:
   project: default
   source:
-    repoURL: https://helm.dask.org/
+    repoURL: https://github.com/Gin-G/argo-k8s-stuff
     chart: daskhub
     targetRevision: 2024.1.1
     helm:
@@ -14,7 +14,7 @@ spec:
       {{- toYaml .Values.jupyterHubConfig | nindent 8 }}
   destination:
     server: https://kubernetes.default.svc
-    namespace: '{{ .Values.namespace }}'
+    namespace: '{{ .Values.jupyterHubs.namespace }}'
   syncPolicy:
     automated:
       prune: true

@@ -1,3 +1,4 @@
+name: app-o-apps-jhubs
 jupyterHubs:
   - name: base-hub
     namespace: app-o-apps-jhubs

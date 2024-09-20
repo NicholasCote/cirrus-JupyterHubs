@@ -5,20 +5,20 @@ metadata:
   namespace: argo
 spec:
   project: default
-    source:
-      repoURL: https://helm.dask.org/
-      chart: daskhub
-      targetRevision: 2024.1.1
-      helm:
-        values: |
-          {{- toYaml .Values.jupyterHubConfig | nindent 8 }}
-    destination:
-      server: https://kubernetes.default.svc
-      namespace: '{{ .Values.namespace }}'
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
-      syncOptions:
-        - CreateNamespace=true
+  source:
+    repoURL: https://helm.dask.org/
+    chart: daskhub
+    targetRevision: 2024.1.1
+    helm:
+    values: |
+      {{- toYaml .Values.jupyterHubConfig | nindent 8 }}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: '{{ .Values.namespace }}'
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
             

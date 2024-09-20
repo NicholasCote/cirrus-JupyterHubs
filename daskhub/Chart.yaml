@@ -2,7 +2,3 @@ apiVersion: v2
 name: daskhub-app-of-apps
 description: Argo CD App of apps for deploying multiple JupyterHub instances
 version: 0.1.0
-dependencies:
-  - name: daskhub
-    version: 2024.1.1
-    repository: https://github.com/Gin-G/argo-k8s-stuff.git

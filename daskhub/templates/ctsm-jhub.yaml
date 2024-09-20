@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: '{{ .Release.Name }}-{{ .Values.name }}'
+  name: '{{ .Release.Name }}-{{ .ctsm-jhub-values.name }}'
   namespace: argo
 spec:
   project: default
@@ -11,11 +11,11 @@ spec:
       targetRevision: main
       helm:
         valueFiles: 
-          - $values/daskhub/values.yaml
+          - $values/daskhub/ctsm-jhub-values.yaml
     - repoURL: 'https://github.com/NicholasCote/cirrus-JupyterHubs'
       targetRevision: main
       ref: values
   destination:
     server: https://kubernetes.default.svc
-    namespace: '{{ .Values.namespace }}'
+    namespace: '{{ .ctsm-jhub-values.namespace }}'
             

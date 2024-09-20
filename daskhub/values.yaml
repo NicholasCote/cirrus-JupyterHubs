@@ -14,6 +14,9 @@ jupyterHubs:
             traefik.ingress.kubernetes.io/router.intrypoints: web
           hosts:
             app-o-apps-jhubs.gingmachine
-      proxy:
-        service:
-          type: ClusterIP
+        proxy:
+          service:
+            type: ClusterIP
+        hub:
+          service:
+            type: ClusterIP

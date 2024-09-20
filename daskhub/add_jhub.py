@@ -21,6 +21,11 @@ def generate_jupyterhub_config(name, namespace, image_name, image_tag, fqdn):
                     'hosts': [fqdn]
                 },
             },
+            'proxy':{
+                'service':{
+                    'type': 'ClusterIP'
+                },
+            },
         },
     }
     return config

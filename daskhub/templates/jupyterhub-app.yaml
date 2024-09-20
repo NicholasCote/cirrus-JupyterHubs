@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: '{{ .Release.Name }}-{{ .Values.name }}'
+  name: '{{ .Release.Name }}-{{ .Values.jhubs.basehub.name }}'
   namespace: argo
 spec:
   project: default
@@ -11,7 +11,7 @@ spec:
       targetRevision: main
       helm:
         valueFiles: 
-          - $values/daskhub/values.yaml
+          - $values/daskhub/base-hub-values.yaml
     - repoURL: 'https://github.com/NicholasCote/cirrus-JupyterHubs'
       targetRevision: main
       ref: values

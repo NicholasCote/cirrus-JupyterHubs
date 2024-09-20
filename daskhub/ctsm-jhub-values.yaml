@@ -1,5 +1,3 @@
-name: ctsm-hub
-namespace: app-o-apps-jhubs
 jupyterhub:
   singleuser:
     image:

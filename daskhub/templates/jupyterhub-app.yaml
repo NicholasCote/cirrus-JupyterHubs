@@ -10,8 +10,8 @@ spec:
     path: daskhub
     targetRevision: main
     helm:
-      values: |
-        {{ .Values.jupyterHubConfig | nindent 8 }}
+      valueFiles: |
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: '{{ .Values.namespace }}'

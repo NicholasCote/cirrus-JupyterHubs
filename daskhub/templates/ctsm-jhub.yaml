@@ -17,5 +17,11 @@ spec:
       ref: values
   destination:
     server: https://kubernetes.default.svc
-    namespace: '{{ .Values.namespace }}'
+    namespace: '{{ .Values.jhubs.ctsm.namespace }}'
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
             

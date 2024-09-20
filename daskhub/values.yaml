@@ -3,4 +3,5 @@ jhubs:
     name: base-hub
   ctsm:
     name: ctsm-hub
-namespace: app-o-apps-jhubs
+    namespace: ctsm-jhub
+namespace: app-o-apps-jhubs 

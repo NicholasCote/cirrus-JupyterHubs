@@ -5,20 +5,17 @@ metadata:
   namespace: argo
 spec:
   project: default
-  source:
-    repoURL: https://github.com/Gin-G/argo-k8s-stuff
-    path: daskhub
-    targetRevision: main
-    helm:
-      values: |
-        {{- toYaml .Values.jupyterHubConfig }}
+  sources:
+    - repoURL: https://github.com/Gin-G/argo-k8s-stuff
+      path: daskhub
+      targetRevision: main
+      helm:
+        valueFiles: 
+          - $values/daskhub/values.yaml
+    - repoURL: 'https://github.com/NicholasCote/cirrus-JupyterHubs'
+      targetRevision: main
+      ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: '{{ .Values.namespace }}'
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
             

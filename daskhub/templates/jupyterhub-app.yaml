@@ -10,7 +10,7 @@ spec:
     path: daskhub
     targetRevision: main
     helm:
-      valueFiles: |
+      valueFiles:
         - values.yaml
   destination:
     server: https://kubernetes.default.svc

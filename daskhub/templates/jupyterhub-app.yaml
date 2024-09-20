@@ -12,9 +12,6 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-      parameters:
-        - name: jupyterhub.ingress.hosts
-          value: '{{ .Values.jupyterhub.ingress.hosts }}'
   destination:
     server: https://kubernetes.default.svc
     namespace: '{{ .Values.namespace }}'

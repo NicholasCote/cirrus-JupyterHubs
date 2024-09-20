@@ -1,5 +1,5 @@
 name: base-hub
-ctsm-name: base-hub
+ctsmname: base-hub
 namespace: app-o-apps-jhubs
 jupyterhub:
   singleuser:

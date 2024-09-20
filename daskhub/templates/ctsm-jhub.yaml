@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: '{{ .Release.Name }}-{{ .Values.name }}'
+  name: '{{ .Release.Name }}-{{ .Values.ctsmname }}'
   namespace: argo
 spec:
   project: default

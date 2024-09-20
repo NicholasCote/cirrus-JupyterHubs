@@ -1,11 +1,10 @@
 name: base-hub
 namespace: app-o-apps-jhubs
-jupyterHubConfig:
-  jupyterhub:
-    singleuser:
-      image:
-        name: docker.io/ncote/jhub-base
-        tag: "2024-09-10"
-    ingress:
-      hosts: 
-        - app-o-apps-jhubs.gingmachine
+jupyterhub:
+  singleuser:
+    image:
+      name: docker.io/ncote/jhub-base
+      tag: "2024-09-10"
+  ingress:
+    hosts: 
+      - app-o-apps-jhubs.gingmachine

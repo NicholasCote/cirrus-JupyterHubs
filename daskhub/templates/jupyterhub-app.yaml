@@ -10,8 +10,8 @@ spec:
     path: daskhub
     targetRevision: main
     helm:
-      valueFiles:
-        - values.yaml
+      values: |
+        {{ .Values }}
   destination:
     server: https://kubernetes.default.svc
     namespace: '{{ .Values.namespace }}'

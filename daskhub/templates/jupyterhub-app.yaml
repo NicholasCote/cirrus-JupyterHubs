@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: '{{ .Release.Name }}-{{ .Values.jhubs.basehub.name }}'
+  name: '{{ .Release.Name }}-{{ .Values.jhubs.base.name }}'
   namespace: argo
 spec:
   project: default

@@ -5,4 +5,4 @@ version: 0.1.0
 dependencies:
   - name: daskhub
     version: 2024.1.1
-    repository: https://github.com/Gin-G/argo-k8s-stuff
+    repository: https://github.com/Gin-G/argo-k8s-stuff.git

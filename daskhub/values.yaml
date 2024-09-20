@@ -6,4 +6,5 @@ jupyterhub:
       name: docker.io/ncote/jhub-base
       tag: "2024-09-10"
   ingress:
-    hosts: app-o-apps-jhubs.gingmachine
+    hosts: 
+      - app-o-apps-jhubs.gingmachine

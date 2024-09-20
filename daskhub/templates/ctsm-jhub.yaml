@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: '{{ .Release.Name }}-{{ .ctsm-jhub-values.name }}'
+  name: '{{ .Release.Name }}-{{ .Values.ctsm-name }}'
   namespace: argo
 spec:
   project: default
@@ -17,5 +17,5 @@ spec:
       ref: values
   destination:
     server: https://kubernetes.default.svc
-    namespace: '{{ .ctsm-jhub-values.namespace }}'
+    namespace: '{{ .Values.namespace }}'
             

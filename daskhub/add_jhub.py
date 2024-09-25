@@ -30,7 +30,7 @@ def generate_application(name):
             ],
             "destination": {
                 "server": "https://kubernetes.default.svc",
-                "namespace": "gitops-jhubs"
+                "namespace": f"{name}-jhub"
             },
             "syncPolicy": {
                 "automated": {

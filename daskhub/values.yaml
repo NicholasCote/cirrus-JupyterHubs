@@ -4,6 +4,8 @@ jhubs:
   ctsm:
     name: ctsm-hub
     namespace: ctsm-jhub
+  pangeo:
+    name: pangeo-jhub
   python:
     name: python-jhub
 namespace: app-o-apps-jhubs

@@ -52,11 +52,11 @@ def generate_values(name, image, tag):
               "name": image,
               "tag": tag
               },
-            "ingress": {
-                "hosts": [
-                    f"{name}-jhub.gingmachine"
-                    ]
-                }
+            },
+          "ingress": {
+            "hosts": [
+                f"{name}-jhub.gingmachine"
+                ]
             }
         }
     }

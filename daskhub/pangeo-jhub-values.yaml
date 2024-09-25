@@ -1,7 +1,7 @@
 jupyterhub:
   ingress:
     hosts:
-    - python-jhub.gingmachine
+    - pangeo-jhub.gingmachine
   singleuser:
     image:
       name: docker.io/pangeo/pangeo-notebook

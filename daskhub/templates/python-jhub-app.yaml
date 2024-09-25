@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: '{{ .Release.Name }}-{{ .Values.jhubs.python.name }}'
+  namespace: argo
+spec:
+  destination:
+    namespace: gitops-jhubs
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - helm:
+      valueFiles:
+      - $values/daskhub/python-jhub-values.yaml
+    path: daskhub
+    repoURL: https://github.com/Gin-G/argo-k8s-stuff
+    targetRevision: main
+  - ref: values
+    repoURL: https://github.com/NicholasCote/cirrus-JupyterHubs
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true

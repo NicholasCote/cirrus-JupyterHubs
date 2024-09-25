@@ -4,4 +4,6 @@ jhubs:
   ctsm:
     name: ctsm-hub
     namespace: ctsm-jhub
-namespace: app-o-apps-jhubs 
+  python:
+    name: python-jhub
+namespace: app-o-apps-jhubs

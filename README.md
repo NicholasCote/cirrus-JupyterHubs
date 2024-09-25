@@ -77,6 +77,5 @@ The generated values file includes:
 
 - The script assumes a specific repository structure and naming convention. Make sure your Argo CD setup matches these assumptions.
 - The ingress host is set to `<name>-jhub.gingmachine`. Adjust this in the script if you need a different domain.
-- The destination namespace is hardcoded to "gitops-jhubs". Modify this in the script if you use a different namespace.
 
 Remember to commit the generated files to your repository after running the script.

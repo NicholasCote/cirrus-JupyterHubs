@@ -21,7 +21,7 @@ To use this new approach:
 
 ## Checklist
 - [ ] Code follows the project's coding standards
-- [ ] Documentation has been updated accordingly
+- [ ] Cloud team has been made aware of intention to add a JupyterHub
 - [ ] All new and existing tests pass
 - [ ] The PR has been tested locally
 
